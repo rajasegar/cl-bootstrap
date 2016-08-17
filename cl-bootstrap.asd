@@ -11,6 +11,17 @@
     :depends-on (:cl-who
                 :parenscript)
     :components ((:file "packages")
-                (:file "cl-bootstrap")))
+                (:file "cl-bootstrap")
+                (:module "src"
+                    :serial t
+                    :components ((:file "dropdowns")
+                        (:file "alerts")
+                        (:file "buttons")
+                        (:file "labels")
+                        (:file "panels")
+                        (:file "modal")
+                        (:file "tabs")
+                        (:file "tables")
+                    ))))
 
 ;; EOF

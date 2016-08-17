@@ -60,25 +60,18 @@
                         (:span :class "icon-bar")
                         (:span :class "icon-bar")
                         (:span :class "icon-bar"))
-                    (:a :class "navbar-brand" :href "#" ,brand))
+                    (:a :class "navbar-brand" :href "/" ,brand))
                 (:div :class "collapse navbar-collapse" :id "bs-example-navbar-collapse-1"
                     (:ul :class "nav navbar-nav"
-                        (:li :class "active"
-                            (:a :href "#" "Link"
-                                (:span :class "sr-only" "(current)")))
-                        (:li (:a :href "#" "Link")))
-                    ,@body)))))
+                        (:li (:a :href "/panels" "Panels"))
+                        (:li (:a :href "/buttons" "Buttons"))
+                        (:li (:a :href "/labels" "Labels"))
+                        (:li (:a :href "/modals" "Modal"))
+                        (:li (:a :href "/tabs" "Tabs"))
+                        (:li (:a :href "/dropdowns" "Dropdowns"))
+                        (:li (:a :href "/tables" "Tables"))
+                        ))
+                    ,@body))))
 
-(defmacro bs-alert ((&key (type "success")) &body body)
-  "Generic alert"
-  `(with-html-output (*standard-output*)
-        (:div :class (format nil "alert alert-~a" ,type) :role "alert"
-            ,@body)))
+; EOF
 
-(defmacro bs-alert-success (&body body)
-  "success alert"
-  `(bs-alert () ,@body))
-
-
-
-;; EOF

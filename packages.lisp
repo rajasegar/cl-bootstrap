@@ -7,7 +7,7 @@
     (:use :cl
           :cl-user
           :cl-who
-          :parenscript)
+          :hunchentoot)
     (:export #:*cl-bootstrap-version*
              #:bs-container
              #:bs-row
@@ -20,6 +20,34 @@
              #:bs-navbar
              #:bs-alert
              #:bs-alert-success
+             #:bs-alert-info
+             #:bs-alert-warning
+             #:bs-alert-danger
+             #:bs-panel
+             #:bs-panel-primary
+             #:bs-panel-info
+             #:bs-panel-success
+             #:bs-panel-warning
+             #:bs-panel-danger
+             #:bs-btn
+             #:bs-btn-primary
+             #:bs-btn-success
+             #:bs-btn-info
+             #:bs-btn-warning
+             #:bs-btn-danger
+             #:bs-label
+             #:bs-label-primary
+             #:bs-label-success
+             #:bs-label-info
+             #:bs-label-warning
+             #:bs-label-danger
+             #:bs-modal
+             #:bs-tab
+             #:bs-tab-pane
+             #:bs-dropdown
+             #:bs-dropup
+	     #:bs-table
+	     #:bs-table-striped
              
              ))
 

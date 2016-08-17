@@ -1,0 +1,14 @@
+;; file: tables.lisp
+
+(in-package :cl-bootstrap)
+
+(defmacro bs-table (&body body)
+  `(with-html-output (*standard-output*)
+     (:table :class "table"
+	     ,@body)))
+
+(defmacro bs-table-striped (&body body)
+  `(with-html-output (*standard-output*)
+     (:table :class "table table-striped"
+	     ,@body)))
+
