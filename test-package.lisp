@@ -87,20 +87,19 @@
 
 (define-easy-handler (tabs :uri "/tabs") ()
     (app-page (:title "Tabs")
-        (:h1 "Tabs")
-        (bs-tab ( '("home" "profile" "messages" "settings"))
-            (bs-tab-pane (:active t :id "home")
-                (:h1 "Home Tab")
-                (:p "Lorem ipsum dolor sit amet"))
-            (bs-tab-pane ( :id "profile")
-                (:h1 "Profile Tab")
-                (:p "Lorem ipsum dolor sit amet"))
-            (bs-tab-pane ( :id "messages")
-                (:h1 "Messages Tab")
-                (:p "Lorem ipsum dolor sit amet"))
-            (bs-tab-pane ( :id "settings")
-                (:h1 "Settings Tab")
-                (:p "Lorem ipsum dolor sit amet")))))
+        (:h2 "Tabs")
+	(bs-tab (:fade t) 
+	 (:title "Home" :active t :id "home"
+		 :content (:div
+			   (:h1 "Home")
+			   (:p "This is a paragraph")
+			   (:ul
+			    (:li "One")
+			    (:li "One")
+			    (:li "One"))))
+	    (:title "Profile" :id "profile" :content (:h1 "Profile"))
+	    (:title "Messages" :id "messages" :content (:h1 "Messages"))
+	    (:title "Settings" :id "settings" :content (:h1 "Settings")))))
 
 (define-easy-handler (dropdowns :uri "/dropdowns") ()
     (app-page (:title "Dropdowns")
@@ -132,8 +131,24 @@
 	     (:tbody
 	      (:tr (:td "1") (:td "Mark") (:td "Otto"))
 	    (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))
-	    (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))))))
-                
+	    (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))))
+	    (bs-table-striped
+	     (:thead
+	      (:tr (:th "#") (:th "First Name") (:th "Last Name") (:th "Username")))
+	     (:tbody
+	      (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))
+	      (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))
+	      (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))))))
+
+(define-easy-handler (carousel :uri "/carousel") ()
+  (app-page (:title "Carousel")
+    (:h1 "Carouse page")
+    (bs-col-md (:grid 8)
+	(bs-carousel (:id "carousel-example-generic")
+	    (:image "http://rajasegar.github.io/JADE-Bootstrap/images/slide1.jpg" :caption "Caption 1" :active t)
+	    (:image "http://rajasegar.github.io/JADE-Bootstrap/images/slide2.jpg" :caption "Caption 2" )
+	    (:image "http://rajasegar.github.io/JADE-Bootstrap/images/slide3.jpg" :caption "Caption 3" )))))
+
 
 
 (defun start-server()

@@ -22,6 +22,7 @@
                         (:file "modal")
                         (:file "tabs")
                         (:file "tables")
+                        (:file "carousel")
                     ))))
 
 ;; EOF

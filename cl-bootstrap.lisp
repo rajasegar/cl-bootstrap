@@ -70,6 +70,7 @@
                         (:li (:a :href "/tabs" "Tabs"))
                         (:li (:a :href "/dropdowns" "Dropdowns"))
                         (:li (:a :href "/tables" "Tables"))
+                        (:li (:a :href "/carousel" "Carousel"))
                         ))
                     ,@body))))
 

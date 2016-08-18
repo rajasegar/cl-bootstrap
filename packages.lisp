@@ -48,6 +48,11 @@
              #:bs-dropup
 	     #:bs-table
 	     #:bs-table-striped
+	     #:bs-table-bordered
+	     #:bs-table-hover
+	     #:bs-table-condensed
+	     #:bs-tab
+	     #:bs-carousel
              
              ))
 
