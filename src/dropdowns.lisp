@@ -16,7 +16,7 @@
   "Toggleable, contextual menu for displaying lists of links."
   `(with-html-output (*standard-output*)
         (:div :class "dropup" 
-            (:button :class "btn btn-default dropdown-toggle" :type "button" :id "dropdownMenu2" :data-toggle "dropdown" :aria-haspopup "true" :aria-expanded "true"
+            (:button :class "btn btn-default dropdown-toggle" :type "button"  :data-toggle "dropdown" :aria-haspopup "true" :aria-expanded "false"
                 ,title
                 "&nbsp;"
                 (:span :class "caret"))

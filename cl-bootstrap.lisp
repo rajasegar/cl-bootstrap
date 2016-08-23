@@ -49,30 +49,5 @@
         (:div :class "well"
             ,@body)))
 
-(defmacro bs-navbar ((&key (inverse nil) (brand "Brand")) &body body)
-  "Navbar"
-  `(with-html-output (*standard-output*)
-        (:nav :class  ,(if inverse "navbar navbar-inverse" "navbar navbar-default")
-            (:div :class "container"
-                (:div :class "navbar-header"
-                    (:button :type "button" :class "navbar-toggle collapsed" :data-toggle "collapse" :data-target "#bs-example-navbar-collapse-1" :aria-expanded "false"
-                        (:span :class "sr-only" "Toggle navigation")
-                        (:span :class "icon-bar")
-                        (:span :class "icon-bar")
-                        (:span :class "icon-bar"))
-                    (:a :class "navbar-brand" :href "/" ,brand))
-                (:div :class "collapse navbar-collapse" :id "bs-example-navbar-collapse-1"
-                    (:ul :class "nav navbar-nav"
-                        (:li (:a :href "/panels" "Panels"))
-                        (:li (:a :href "/buttons" "Buttons"))
-                        (:li (:a :href "/labels" "Labels"))
-                        (:li (:a :href "/modals" "Modal"))
-                        (:li (:a :href "/tabs" "Tabs"))
-                        (:li (:a :href "/dropdowns" "Dropdowns"))
-                        (:li (:a :href "/tables" "Tables"))
-                        (:li (:a :href "/carousel" "Carousel"))
-                        ))
-                    ,@body))))
-
 ; EOF
 

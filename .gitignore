@@ -2,3 +2,5 @@
 *.fasl
 *.lisp-temp
 *.swp
+.DS_Store
+*.lisp~

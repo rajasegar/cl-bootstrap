@@ -23,6 +23,8 @@
                         (:file "tabs")
                         (:file "tables")
                         (:file "carousel")
-                    ))))
+                        (:file "navbar")
+                        (:file "accordion")
+                        (:file "forms")))))
 
 ;; EOF

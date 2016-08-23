@@ -18,6 +18,10 @@
              #:bs-icon
              #:bs-well
              #:bs-navbar
+             #:bs-navbar-nav
+	     #:bs-nav-li
+	     #:bs-nav-dropdown
+	     #:bs-navbar-form
              #:bs-alert
              #:bs-alert-success
              #:bs-alert-info
@@ -53,6 +57,9 @@
 	     #:bs-table-condensed
 	     #:bs-tab
 	     #:bs-carousel
+	     #:bs-accordion
+	     #:bs-accordion-item
+	     #:bs-form-email
              
              ))
 
