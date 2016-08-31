@@ -1,6 +1,8 @@
 # cl-bootstrap
 Common Lisp web development widget library for Twitter's Bootstrap
 
+[![Quicklisp](http://quickdocs.org/badge/cl-bootstrap.svg)](http://quickdocs.org/cl-bootstrap/)
+
 
 Widgets are implemented as a macro library which can easily be used in your Common Lisp web development projects, eliminating all Web UI boilerplate code; includes automatic generation of tables and responsive grids from a list of renderable elements.
 
