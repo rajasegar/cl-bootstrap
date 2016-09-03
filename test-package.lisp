@@ -1,4 +1,4 @@
-(ql:quickload '(:cl-who :hunchentoot))
+(ql:quickload "hunchentoot")
 (asdf:operate 'asdf:load-op 'cl-bootstrap)
 (in-package :cl-bootstrap)
 
@@ -53,7 +53,7 @@
                       (bs-alert-warning  "This is a warning alert")
                       (bs-alert-danger  "This is a danger alert")))
 
-(define-easy-handler (panels :uri "/panels") ()
+(hunchentoot:define-easy-handler (panels :uri "/panels") ()
     (app-page (:title "Panels")
         (bs-panel () "This is a panel")
         (bs-panel-primary "This is a primary panel")
@@ -62,7 +62,7 @@
         (bs-panel-warning "This is a warning panel")
         (bs-panel-danger "This is a danger panel")))
 
-(define-easy-handler (buttons :uri "/buttons") ()
+(hunchentoot:define-easy-handler (buttons :uri "/buttons") ()
     (app-page (:title "Buttons")
         (:h1 "Buttons")
         (bs-btn () "Default button")
@@ -80,7 +80,7 @@
         
         ))
 
-(define-easy-handler (labels-page :uri "/labels") ()
+(hunchentoot:define-easy-handler (labels-page :uri "/labels") ()
     (app-page (:title "Labels")
         (:h1 "Labels")
         (bs-label () "Default Label")
@@ -90,7 +90,7 @@
         (bs-label-info "Info Label")
         (bs-label-danger "Danger Label")))
 
-(define-easy-handler (modals :uri "/modals") ()
+(hunchentoot:define-easy-handler (modals :uri "/modals") ()
     (app-page (:title "Modals")
         (:h1 "Modals")
         (:button :type "button" :class "btn btn-primary btn-lg" :data-toggle "modal" :data-target "#myModal" "Launch demo modal")
@@ -98,7 +98,7 @@
             (:h1 "Modal content")
             (:p "this sis a paragraph"))))
 
-(define-easy-handler (tabs :uri "/tabs") ()
+(hunchentoot:define-easy-handler (tabs :uri "/tabs") ()
     (app-page (:title "Tabs")
         (:h2 "Tabs")
 	(bs-tab (:fade t) 
@@ -114,7 +114,7 @@
 	    (:title "Messages" :id "messages" :content (:h1 "Messages"))
 	    (:title "Settings" :id "settings" :content (:h1 "Settings")))))
 
-(define-easy-handler (dropdowns :uri "/dropdowns") ()
+(hunchentoot:define-easy-handler (dropdowns :uri "/dropdowns") ()
     (app-page (:title "Dropdowns")
         (:h1 "Dropdowns")
         ;; (bs-dropdown (:title "Dropdown") 
@@ -134,7 +134,7 @@
                 (:li :role "separator" :class "divider")
                 (:li (:a :href "#" "Separated Link"))))))
 
-(define-easy-handler (tables :uri "/tables") ()
+(hunchentoot:define-easy-handler (tables :uri "/tables") ()
   (app-page (:title "Tables")
 	    (:h1 "Tables")
 	    (bs-table
@@ -153,7 +153,7 @@
 	      (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))
 	      (:tr (:td "1") (:td "Mark") (:td "Otto") (:td "@mdo"))))))
 
-(define-easy-handler (carousel :uri "/carousel") ()
+(hunchentoot:define-easy-handler (carousel :uri "/carousel") ()
   (app-page (:title "Carousel")
     (:h1 "Carouse page")
     (bs-col-md (:grid 8)
@@ -162,7 +162,7 @@
 	    (:image "http://rajasegar.github.io/JADE-Bootstrap/images/slide2.jpg" :caption "Caption 2" )
 	    (:image "http://rajasegar.github.io/JADE-Bootstrap/images/slide3.jpg" :caption "Caption 3" )))))
 
-(define-easy-handler (navbars :uri "/navbars") ()
+(hunchentoot:define-easy-handler (navbars :uri "/navbars") ()
   (app-page (:title "Navbars")
 	    (:h1 "Navbars")
 	    (bs-navbar (:inverse t :brand "Brand")
@@ -191,7 +191,7 @@
 				      (:li (:a :href "#" "Link2"))
 				      (:li (:a :href "#" "Link3"))))))
 
-(define-easy-handler (accordions :uri "/accordions") ()
+(hunchentoot:define-easy-handler (accordions :uri "/accordions") ()
   (app-page (:title "Accordions")
 	    (:h1 "Accordions")
 	    (bs-accordion (:id "accordion")
@@ -202,7 +202,7 @@
 		(bs-accordion-item (:id "collapseThree" :title "Accordion 3" :parent "accordion")
 		    "Lorem ipsum dolor sit amet"))))
 
-(define-easy-handler (forms :uri "/forms") ()
+(hunchentoot:define-easy-handler (forms :uri "/forms") ()
   (app-page (:title "cl-bootstrap Forms")
 	    (:h1 "Forms")
 	    (:form
@@ -215,9 +215,9 @@
 (defun start-server()
     (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 3000)))
 
-(push (create-folder-dispatcher-and-handler "/css/" "public/css/") *dispatch-table*)
-(push (create-folder-dispatcher-and-handler "/js/" "public/js/") *dispatch-table*)
-(push (create-folder-dispatcher-and-handler "/fonts/" "public/fonts/") *dispatch-table*)
+(push (hunchentoot:create-folder-dispatcher-and-handler "/css/" "public/css/") hunchentoot:*dispatch-table*)
+(push (hunchentoot:create-folder-dispatcher-and-handler "/js/" "public/js/") hunchentoot:*dispatch-table*)
+(push (hunchentoot:create-folder-dispatcher-and-handler "/fonts/" "public/fonts/") hunchentoot:*dispatch-table*)
 
 
 (start-server)

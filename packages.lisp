@@ -6,8 +6,7 @@
     (:nicknames #:bootstrap)
     (:use :cl
           :cl-user
-          :cl-who
-          :hunchentoot)
+          :cl-who)
     (:export #:*cl-bootstrap-version*
              #:bs-container
              #:bs-row
@@ -19,9 +18,9 @@
              #:bs-well
              #:bs-navbar
              #:bs-navbar-nav
-	     #:bs-nav-li
-	     #:bs-nav-dropdown
-	     #:bs-navbar-form
+             #:bs-nav-li
+             #:bs-nav-dropdown
+             #:bs-navbar-form
              #:bs-alert
              #:bs-alert-success
              #:bs-alert-info
