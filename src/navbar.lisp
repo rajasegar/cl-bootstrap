@@ -8,10 +8,20 @@
 	     ,@body)))
 
 
-(defmacro bs-navbar ((&key (fluid nil) (inverse nil) (brand "Brand")) &body body)
+(defmacro bs-navbar ((&key
+                      (fluid nil)
+                      (inverse nil)
+                      (fixed-top nil)
+                      (fixed-bottom nil)
+                      (static-top nil)
+                      (brand "Brand")) &body body)
   "Navbar"
   `(with-html-output (*standard-output*)
-        (:nav :class  ,(if inverse "navbar navbar-inverse" "navbar navbar-default")
+                     (:nav :class  ,(concatenate 'string "navbar"
+                                                 (if inverse " navbar-inverse" " navbar-default")
+                                                 (if fixed-top " navbar-fixed-top" nil)
+                                                 (if fixed-bottom " navbar-fixed-bottom" nil)
+                                                 (if static-top " navbar-static-top" nil))
             (:div :class ,(if fluid "container-fluid" "container")
                 (:div :class "navbar-header"
                     (:button :type "button" :class "navbar-toggle collapsed" :data-toggle "collapse" :data-target "#bs-example-navbar-collapse-1" :aria-expanded "false"

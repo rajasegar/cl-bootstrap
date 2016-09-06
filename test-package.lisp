@@ -65,19 +65,43 @@
 (hunchentoot:define-easy-handler (buttons :uri "/buttons") ()
     (app-page (:title "Buttons")
         (:h1 "Buttons")
-        (bs-btn () "Default button")
-        (bs-btn (:type "primary") "Primary button")
-        (bs-btn (:type "success") "Success button")
-        (bs-btn (:type "warning") "Warning button")
-        (bs-btn (:type "danger") "Danger button")
+        (:h2 "Generic macro")
+        (bs-btn () "Default button") "&nbsp;"
+        (bs-btn (:type "primary") "Primary button") "&nbsp;"
+        (bs-btn (:type "success") "Success button") "&nbsp;"
+        (bs-btn (:type "warning") "Warning button") "&nbsp;"
+        (bs-btn (:type "danger") "Danger button") "&nbsp;"
         (bs-btn (:type "info") "Info button") 
         (:br)
-        (bs-btn-primary "Primary")
-        (bs-btn-success "Success")
-        (bs-btn-info "Info")
-        (bs-btn-warning "Warning")
-        (bs-btn-danger "Danger")
-        
+        (:h2 "Specific macro")
+        (bs-btn-primary "Primary") "&nbsp;"
+        (bs-btn-success "Success") "&nbsp;"
+        (bs-btn-info "Info") "&nbsp;"
+        (bs-btn-warning "Warning") "&nbsp;"
+        (bs-btn-danger "Danger") "&nbsp;"
+        (:h2 "Large buttons")
+        (bs-btn-lg () "Default") "&nbsp;"
+        (bs-btn-lg (:type "primary") "Primary") "&nbsp;"
+        (bs-btn-lg (:type "success") "Success") "&nbsp;"
+        (bs-btn-lg (:type "info") "Info") "&nbsp;"
+        (bs-btn-lg (:type "warning") "Warning") "&nbsp;"
+        (bs-btn-lg (:type "danger") "Danger") "&nbsp;"
+        (:h2 "Small buttons")
+        (bs-btn-sm () "Default") "&nbsp;"
+        (bs-btn-sm (:type "primary") "Primary") "&nbsp;"
+        (bs-btn-sm (:type "success") "Success") "&nbsp;"
+        (bs-btn-sm (:type "info") "Info") "&nbsp;"
+        (bs-btn-sm (:type "warning") "Warning") "&nbsp;"
+        (bs-btn-sm (:type "danger") "Danger") "&nbsp;"
+        (:h2 "Extra Small buttons")
+        (bs-btn-xs () "Default") "&nbsp;"
+        (bs-btn-xs (:type "primary") "Primary") "&nbsp;"
+        (bs-btn-xs (:type "success") "Success") "&nbsp;"
+        (bs-btn-xs (:type "info") "Info") "&nbsp;"
+        (bs-btn-xs (:type "warning") "Warning") "&nbsp;"
+        (bs-btn-xs (:type "danger") "Danger") "&nbsp;"
+
+
         ))
 
 (hunchentoot:define-easy-handler (labels-page :uri "/labels") ()
@@ -165,7 +189,7 @@
 (hunchentoot:define-easy-handler (navbars :uri "/navbars") ()
   (app-page (:title "Navbars")
 	    (:h1 "Navbars")
-	    (bs-navbar (:inverse t :brand "Brand")
+	    (bs-navbar (:inverse t :static-top t :brand "Brand")
 		(bs-navbar-nav ()
 		    ;(:li (:a :href "/panels" "Panels"))
 		    (bs-nav-li (:href "/panels") "Panels")
