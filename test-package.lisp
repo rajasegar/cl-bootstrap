@@ -2,6 +2,7 @@
 (asdf:operate 'asdf:load-op 'cl-bootstrap)
 (in-package :cl-bootstrap)
 
+
 (setf (html-mode) :html5)
 
 (defmacro app-page ((&key title) &body body)
@@ -30,6 +31,7 @@
 			(:li (:a :href "/carousel" "Carousel"))
 			(:li (:a :href "/navbars" "Navbars"))
 			(:li (:a :href "/forms" "Forms"))
+			(:li (:a :href "/button-dropdowns" "Button Dropdowns"))
 			(:li (:a :href "/accordions" "Accordions")))))
 	    (bs-container ()
 		(bs-row
@@ -235,6 +237,16 @@
 	     (bs-form-file ())
 	     (bs-form-checkbox "Check me out")
 	    (:button :type "submit" :class "btn btn-default" "Submit"))))
+
+(hunchentoot:define-easy-handler (button-dropdowns :uri "/button-dropdowns")()
+                                 (app-page (:title "cl-bootstrap Button dropdowns")
+                                           (:h1 "Button dropdowns")
+                                           (bs-btn-dropdown (:title "Default")
+                                                            (:li (:a :href "#" "Action"))
+                                                            (:li (:a :href "#" "Another Action"))
+                                                            (:li (:a :href "#" "Something else here"))
+                                                            (:li :role "separator" :class "divider")
+                                                            (:li (:a :href "#" "Separated link")))))
 
 (defun start-server()
     (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 3000)))

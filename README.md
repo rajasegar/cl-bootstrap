@@ -13,6 +13,12 @@ Widgets are implemented as a macro library which can easily be used in your Comm
 ## Dependencies
 [cl-who](https://github.com/edicl/cl-who)
 
+## Installation
+cl-bootstrap is available on [Quicklisp](http://quicklisp.org)
+```lisp
+(ql:quickload "cl-bootstrap")
+```
+
 
 ## Documentation
 

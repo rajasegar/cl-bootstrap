@@ -1,6 +1,6 @@
 ;; file: cl-bootstrap.asd
 
-(defparameter *cl-bootstrap-version* "0.0.1")
+(defparameter *cl-bootstrap-version* "0.0.2")
 
 (asdf:defsystem :cl-bootstrap
     :description "Twitter Bootstrap widget library for Common Lisp"
@@ -25,6 +25,7 @@
                         (:file "carousel")
                         (:file "navbar")
                         (:file "accordion")
+                        (:file "button-dropdowns")
                         (:file "forms")))))
 
 ;; EOF
