@@ -60,6 +60,10 @@
 	     #:bs-accordion-item
 	     #:bs-form-email
              
+	     #:*bootstrap-css-url*
+	     #:*jquery-url*
+	     #:*bootstrap-js-url*
+	     #:bs-page
              ))
 
 
