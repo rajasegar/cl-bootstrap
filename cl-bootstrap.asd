@@ -26,6 +26,7 @@
                         (:file "navbar")
                         (:file "accordion")
                         (:file "button-dropdowns")
-                        (:file "forms")))))
+                        (:file "forms")
+                        (:file "bootstrap-helper")))))
 
 ;; EOF
