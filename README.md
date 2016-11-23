@@ -1,6 +1,7 @@
 # cl-bootstrap
 Common Lisp web development widget library for Twitter's Bootstrap
 
+[![Build Status](https://travis-ci.org/rajasegar/cl-bootstrap.svg?branch=master)](https://travis-ci.org/rajasegar/cl-bootstrap)
 [![Quicklisp](http://quickdocs.org/badge/cl-bootstrap.svg)](http://quickdocs.org/cl-bootstrap/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
