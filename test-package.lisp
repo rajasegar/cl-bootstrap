@@ -14,7 +14,7 @@
               (:link
                 :type "text/css"
                 :rel "stylesheet"
-                :href "/css/bootstrap.min.css")
+                :href "/styles.css")
               (:script :src "/js/jquery.min.js")
               (:script :src "/js/bootstrap.min.js"))
             (:body 
@@ -37,6 +37,12 @@
 		(bs-row
 		    (bs-col-md () 
 	    ,@body)))))))
+
+
+(hunchentoot:define-easy-handler (styles :uri "/styles.css") ()
+  (setf (hunchentoot:content-type* hunchentoot:*reply*) "text/css")
+  (cl-bootstrap-css))
+
 
 
 (hunchentoot:define-easy-handler (app :uri "/") ()

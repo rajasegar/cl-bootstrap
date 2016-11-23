@@ -6,7 +6,8 @@
     (:nicknames #:bootstrap)
     (:use :cl
           :cl-user
-          :cl-who)
+          :cl-who
+          :lass)
     (:export #:*cl-bootstrap-version*
              #:bs-container
              #:bs-row

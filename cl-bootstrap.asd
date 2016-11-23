@@ -9,7 +9,8 @@
     :serial t
     :author "Rajasegar Chandran <rajasegar.c@gmail.com>"
     :depends-on (:cl-who
-                :parenscript)
+                 :parenscript
+                 :lass)
     :components ((:file "packages")
                 (:file "cl-bootstrap")
                 (:module "src"
@@ -26,6 +27,7 @@
                         (:file "navbar")
                         (:file "accordion")
                         (:file "button-dropdowns")
+                        (:file "css")
                         (:file "forms")))))
 
 ;; EOF
