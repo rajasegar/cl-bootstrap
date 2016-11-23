@@ -1,2 +1,2 @@
 #!/bin/sh
-nodemon --exec "sbcl --load" test-package.lisp
+nodemon --exec "sbcl --load" demo.lisp

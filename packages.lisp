@@ -49,21 +49,20 @@
              #:bs-tab-pane
              #:bs-dropdown
              #:bs-dropup
-	     #:bs-table
-	     #:bs-table-striped
-	     #:bs-table-bordered
-	     #:bs-table-hover
-	     #:bs-table-condensed
-	     #:bs-tab
-	     #:bs-carousel
-	     #:bs-accordion
-	     #:bs-accordion-item
-	     #:bs-form-email
-             
-	     #:*bootstrap-css-url*
-	     #:*jquery-url*
-	     #:*bootstrap-js-url*
-	     #:bs-page
+            #:bs-table
+            #:bs-table-striped
+            #:bs-table-bordered
+            #:bs-table-hover
+            #:bs-table-condensed
+            #:bs-tab
+            #:bs-carousel
+            #:bs-accordion
+            #:bs-accordion-item
+            #:bs-form-email
+            #:*bootstrap-css-url*
+            #:*jquery-url*
+            #:*bootstrap-js-url*
+            #:bs-page
              ))
 
 

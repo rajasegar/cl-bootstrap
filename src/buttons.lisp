@@ -44,5 +44,9 @@
 (defmacro bs-btn-danger (&body body)
   `(bs-btn (:type "danger") ,@body))
 
+(defmacro bs-link-btn ((&key (type "default") (size nil) (href "#")) &body body)
+  `(with-html-output (*standard-output*)
+     (:a :role "button" :class (concatenate 'string "btn" (if ,type (format nil " btn-~a" ,type)) (if ,size (format nil " btn-~a" ,size))) :href ,href
+              ,@body)))
 
 ;; EOF

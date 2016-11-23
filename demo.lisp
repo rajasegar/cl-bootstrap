@@ -36,7 +36,10 @@
 	    (bs-container ()
 		(bs-row
 		    (bs-col-md () 
-	    ,@body)))))))
+                   ,@body)
+                   (:footer :class "clearfix"
+                    (:hr)
+                    (:p "Copyright &copy; 2016, All rights reserved"))))))))
 
 
 (hunchentoot:define-easy-handler (app :uri "/") ()
@@ -102,6 +105,14 @@
         (bs-btn-xs (:type "info") "Info") "&nbsp;"
         (bs-btn-xs (:type "warning") "Warning") "&nbsp;"
         (bs-btn-xs (:type "danger") "Danger") "&nbsp;"
+              (:h2 "Link buttons")
+              (bs-link-btn () "Default")
+              (bs-link-btn (:type "primary" :href "http://google.com") "Primary")
+              (bs-link-btn (:type "success" :href "http://google.com") "Success")
+              (bs-link-btn (:type "warning" :href "http://google.com") "Warning")
+              (bs-link-btn (:type "info" :href "http://google.com") "Info")
+              (bs-link-btn (:type "danger" :href "http://google.com") "Danger")
+
 
 
         ))
