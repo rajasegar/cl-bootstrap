@@ -60,12 +60,12 @@
 
 (hunchentoot:define-easy-handler (panels :uri "/panels") ()
     (app-page (:title "Panels")
-        (bs-panel () "This is a panel")
-        (bs-panel-primary "This is a primary panel")
-        (bs-panel-success "This is a success panel")
-        (bs-panel-info "This is a info panel")
-        (bs-panel-warning "This is a warning panel")
-        (bs-panel-danger "This is a danger panel")))
+        (bs-panel (:title "Generic Panel") "This is a panel")
+        (bs-panel-primary (:title "Primary Panel") "This is a primary panel")
+              (bs-panel-success (:title "Success Panel") "This is a success panel")
+              (bs-panel-info (:title "Info Panel") "This is a info panel")
+              (bs-panel-warning (:title "Warning Panel") "This is a warning panel")
+              (bs-panel-danger (:title "Danger Panel") "This is a danger panel")))
 
 (hunchentoot:define-easy-handler (buttons :uri "/buttons") ()
     (app-page (:title "Buttons")
