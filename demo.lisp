@@ -5,6 +5,7 @@
 
 (setf (html-mode) :html5)
 
+
 (defmacro app-page ((&key title) &body body)
   `(with-html-output-to-string (*standard-output* nil :prologue t :indent t)
         (:html :lang "en"
@@ -14,9 +15,9 @@
               (:link
                 :type "text/css"
                 :rel "stylesheet"
-                :href "/css/bootstrap.min.css")
-              (:script :src "/js/jquery.min.js")
-              (:script :src "/js/bootstrap.min.js"))
+                :href  ,*bootstrap-css-url*)
+              (:script :src ,*jquery-url*)
+              (:script :src ,*bootstrap-js-url*))
             (:body 
 	     (bs-navbar (:brand "cl-bootstrap")
 		(bs-navbar-nav ()
