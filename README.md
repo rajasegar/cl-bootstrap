@@ -20,6 +20,13 @@ cl-bootstrap is available on [Quicklisp](http://quicklisp.org)
 (ql:quickload "cl-bootstrap")
 ```
 
+## Demo
+```lisp
+(ql:quickload "cl-bootstrap-demo")
+(cl-bootstrap-demo:start-demo)
+```
+
+You can see the demo at [http://localhost:3000](http://localhost:3000).
 
 ## Documentation
 
